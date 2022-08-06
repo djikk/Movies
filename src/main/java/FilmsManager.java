@@ -6,9 +6,11 @@ public class FilmsManager {
     public FilmsManager() {
         this.limit = 10;
     }
+
     public FilmsManager(int limit) {
         this.limit = limit;
     }
+
     public void addFilm(String film) {
         String[] tmp = new String[films.length + 1];
         for (int i = 0; i < films.length; i++) {
@@ -16,7 +18,6 @@ public class FilmsManager {
         }
         tmp[tmp.length - 1] = film;
         films = tmp;
-
     }
 
     public String[] findAllFilms() {
@@ -25,9 +26,7 @@ public class FilmsManager {
             tmp[i] = films[i];
         }
         return tmp;
-
     }
-
     public String[] findLastFilms() {
         int resultLength;
         if (limit <= films.length) {
@@ -40,6 +39,5 @@ public class FilmsManager {
             tmp[i] = films[films.length - 1 - i];
         }
         return tmp;
-
     }
 }
